@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,7 @@ body {
     background-color: #201f1f;
     overflow: hidden;
     top: 0;
+    font-family: 'Oxygen', sans-serif;
     left: 0;
     color: #b3b3b3;
     min-height: 100vh;
