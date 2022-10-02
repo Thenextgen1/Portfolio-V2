@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { DesktopNav } from "../../components";
 
 const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <header className="py-16">
+      <DesktopNav />
+    </header>
+  );
+};
 
-export default Header
+export default Header;
