@@ -15,4 +15,34 @@
         background-repeat: no-repeat;
     }
 
+
+    .arrow_cont:nth-of-type(2)>span,
+    .arrow_cont:nth-of-type(3)>span {
+        margin-top: -9px !important;
+
+    }
+
+    .arrow_cont:nth-of-type(1) {
+        animation: opac .5s ease-in-out .5s infinite;
+    }
+
+    .arrow_cont:nth-of-type(2) {
+        animation: opac .5s ease-in-out 1s infinite;
+    }
+
+    .arrow_cont:nth-of-type(3) {
+        animation: opac .5s ease-in-out 1.5s infinite;
+    }
+
+
+    @keyframes opac {
+        from {
+            opacity: 0.3;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
 }
