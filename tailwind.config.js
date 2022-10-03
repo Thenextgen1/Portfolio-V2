@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Oxygen: ["Oxygen"]
+        Oxygen: ["Oxygen"],
+        Synocopate: ["Syncopate"]
       }
     },
   },
