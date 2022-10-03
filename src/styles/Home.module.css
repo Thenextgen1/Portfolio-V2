@@ -3,4 +3,5 @@
     /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.075rem;
     -webkit-text-stroke-color: #b3b3b3;
+    @apply font-Synocopate
 }
