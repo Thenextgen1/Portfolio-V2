@@ -13,25 +13,27 @@
         background: url(/images/circle.svg);
         height: 132px;
         background-repeat: no-repeat;
+        -webkit-animation: rotate-center 1s ease-in-out both;
+        animation: rotate-center 0.5s ease-in-out both;
     }
 
 
-    .arrow_cont:nth-of-type(2)>span,
-    .arrow_cont:nth-of-type(3)>span {
-        margin-top: -9px !important;
+    .arrow_cont:nth-of-type(2),
+    .arrow_cont:nth-of-type(3) {
+        margin-top: -14px !important;
 
     }
 
     .arrow_cont:nth-of-type(1) {
-        animation: opac .5s ease-in-out .5s infinite;
+        animation: opac 2s ease-in-out 3s infinite;
     }
 
     .arrow_cont:nth-of-type(2) {
-        animation: opac .5s ease-in-out 1s infinite;
+        animation: opac 1.5s ease-in-out 0.5s infinite;
     }
 
     .arrow_cont:nth-of-type(3) {
-        animation: opac .5s ease-in-out 1.5s infinite;
+        animation: opac 2s ease-in-out 2s infinite;
     }
 
 
@@ -42,6 +44,30 @@
 
         to {
             opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes rotate-center {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate-center {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
         }
     }
 

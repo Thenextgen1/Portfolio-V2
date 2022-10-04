@@ -16,7 +16,7 @@ const Footer = () => {
           <div className={styles.arrow_cont}>
             <Image
               src="/images/arrow_down.svg"
-              alt="arrow_down.svg"
+              alt="arrow_down"
               width="20px"
               height="20px"
               style={arrowStyle}
