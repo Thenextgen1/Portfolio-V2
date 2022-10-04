@@ -1,5 +1,6 @@
 .line_container {
     @apply flex flex-col items-end;
+    z-index: 100;
 }
 
 .line_container>div:nth-of-type(1) {
@@ -12,4 +13,23 @@
     width: 20px;
     height: 1px;
     background-color: var(--menuColor);
+}
+
+.mobile_menu_list {
+    @apply absolute h-screen w-screen flex flex-col justify-center items-center top-0 left-0;
+    background-color: var(--menu-background-color);
+    z-index: 10;
+}
+
+.mobile_menu_list li {
+    @apply text-center
+}
+
+.mobile_menu_list>ul:nth-of-type(1) li {
+    padding: 1em 0;
+    letter-spacing: 2px;
+}
+
+.mobile_menu_list>ul:nth-of-type(2) {
+    margin: 3em 0;
 }

@@ -48,7 +48,7 @@ const Footer = () => {
           SCROLL
         </p>
       </div>
-      <div className="lg:hidden flex items-center justify-center absolute w-screen top-3/4 bottom-0 flex-col">
+      <div className="lg:hidden flex items-center justify-center absolute w-screen top-[80%] bottom-0 flex-col">
         <ul className="flex">
           <li className="px-7">
             <a
@@ -79,11 +79,12 @@ const Footer = () => {
           </li>
         </ul>
         <p className="pt-6 tracking-widest text-[11px]">
-          INSPIRED BY{" "}
+          <span className="opacity-50">INSPIRED BY </span>
           <a
             href="https://www.behance.net/rdbok"
             rel="noreferrer"
             target="_blank"
+            className="font-bold"
           >
             ROGER
           </a>
