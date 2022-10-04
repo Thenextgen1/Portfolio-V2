@@ -111,7 +111,9 @@ const BaseLayout: FC<Props> = ({ children }) => {
       </Head>
       <Header />
       {children}
+
       <Aside />
+
       <Footer />
     </>
   );
