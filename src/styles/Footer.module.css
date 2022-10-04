@@ -1,3 +1,7 @@
+.scroll_div {
+    @apply hidden;
+}
+
 @media(min-width: 1024px) {
     .scroll_div {
         @apply flex justify-center items-center rounded-full flex-col;
