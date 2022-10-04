@@ -24,45 +24,47 @@ body {
     color: #b3b3b3;
 }
 
-body::after {
-    content: "";
-    position: absolute;
-    width: 200vw;
-    height: 200vh;
-    left: -50%;
-    z-index: -1;
-    top: -50%;
-    overflow: hidden;
+@media (min-width: 1024px) {
+    body::after {
+        content: "";
+        position: absolute;
+        width: 200vw;
+        height: 200vh;
+        left: -50%;
+        z-index: -1;
+        top: -50%;
+        overflow: hidden;
 
 
-    background-image: url(/images/grain.png);
-    animation: grain 1.5s steps(6) infinite;
-}
-
-@keyframes grain {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
+        background-image: url(/images/grain.png);
+        animation: grain 1.5s steps(6) infinite;
     }
 
-    10% {
-        transform: translate(-5%, -10%);
-    }
+    @keyframes grain {
 
-    30% {
-        transform: translate(3%, -15%);
-    }
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
 
-    50% {
-        transform: translate(12%, 9%);
-    }
+        10% {
+            transform: translate(-5%, -10%);
+        }
 
-    70% {
-        transform: translate(9%, 4%);
-    }
+        30% {
+            transform: translate(3%, -15%);
+        }
 
-    90% {
-        transform: translate(-1%, 7%);
+        50% {
+            transform: translate(12%, 9%);
+        }
+
+        70% {
+            transform: translate(9%, 4%);
+        }
+
+        90% {
+            transform: translate(-1%, 7%);
+        }
     }
 }
