@@ -1,7 +1,11 @@
-import React from "react";
+import BaseLayout from "../src/layout";
 
 const Portfolio = () => {
-  return <div>showcase</div>;
+  return (
+    <BaseLayout>
+      <div>showcase</div>
+    </BaseLayout>
+  );
 };
 
 export default Portfolio;
