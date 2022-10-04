@@ -3,7 +3,7 @@ import styles from "../../styles/Aside.module.css";
 
 const Aside = () => {
   return (
-    <aside className="fixed top-0 py-16 h-screen mx-auto left-[5%]">
+    <aside className="hidden lg:block fixed top-0 py-16 h-screen mx-auto left-[5%]">
       <div className="flex justify-between flex-col items-center h-full">
         <div>
           <Image
