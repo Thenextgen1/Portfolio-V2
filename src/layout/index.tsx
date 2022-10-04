@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Footer, Header } from "../components";
+import { Footer, Header, Aside } from "../components";
 
 interface Props {
   children: JSX.Element;
@@ -111,6 +111,7 @@ const BaseLayout: FC<Props> = ({ children }) => {
       </Head>
       <Header />
       {children}
+      <Aside />
       <Footer />
     </>
   );

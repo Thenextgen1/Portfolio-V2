@@ -14,7 +14,7 @@ const Home: NextPage = () => {
             <span className={`${styles.text_stroke}`}> DEVELOPER</span>
           </h2>
         </div>
-        <p className="text-xs lg:absolute lg:bottom-0 lg:mb-[5%] lg:ml-[1px]">
+        <p className="text-xs lg:absolute lg:bottom-0 lg:mb-[5%] lg:ml-[1px] tracking-widest">
           MERN STACK DEVELOPER & DATA ANALYST
         </p>
       </main>
