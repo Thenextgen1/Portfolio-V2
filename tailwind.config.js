@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         Oxygen: ["Oxygen"],
         Synocopate: ["Syncopate"]
-      }
+      },
     },
   },
   plugins: [],
