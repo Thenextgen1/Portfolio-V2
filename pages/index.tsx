@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             ecosystem using <span className="text-Gray">modern</span> and
             best-react practices. <span className="text-Gray">I</span> am
             currently <span className="text-Gray">mastering</span> the{" "}
-            <span className="text-Gray">MERN</span> Stack as well.
+            <span className="text-Gray">MERN</span> STACK as well.
           </p>
         </section>
       </main>
