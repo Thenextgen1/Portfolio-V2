@@ -5,10 +5,9 @@ import styles from "../../../styles/DesktopNav.module.css";
 
 const DesktopNav = () => {
   const { pathname } = useRouter();
-  console.log(pathname);
 
   return (
-    <nav className="lg:flex justify-between items-baseline ml-[17%] pr-20 hidden">
+    <nav className="lg:flex justify-between ml-[17%] pr-20 hidden">
       <h1 className="text-sm font-semibold tracking-wider">
         <Link href="/">ELIJAH OHIWEREI</Link>
       </h1>

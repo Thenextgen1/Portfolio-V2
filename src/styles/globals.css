@@ -20,12 +20,25 @@
 
 body {
     background-color: #201f1f;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
     font-family: 'Oxygen', sans-serif;
     color: #b3b3b3;
 }
 
-@media (min-width: 1024px) {
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* @media (min-width: 1024px) {
     body::after {
         content: "";
         position: absolute;
@@ -68,4 +81,4 @@ body {
             transform: translate(-1%, 7%);
         }
     }
-}
+} */
