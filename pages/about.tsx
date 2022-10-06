@@ -1,4 +1,5 @@
 import BaseLayout from "../src/layout";
+import { Experience } from "../src/components";
 import styles from "../src/styles/About.module.css";
 
 const about = () => {
@@ -39,7 +40,7 @@ const about = () => {
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90">
             EXPERIENCE
           </h2>
-          <div></div>
+          <Experience />
         </section>
       </main>
     </BaseLayout>
