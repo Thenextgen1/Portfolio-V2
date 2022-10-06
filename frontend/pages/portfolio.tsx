@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import BaseLayout from "../src/layout";
 
-const Portfolio = () => {
+const Portfolio: NextPage = () => {
   return (
     <BaseLayout>
       <div>showcase</div>

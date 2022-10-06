@@ -1,8 +1,9 @@
 import BaseLayout from "../src/layout";
 import { Experience } from "../src/components";
 import styles from "../src/styles/About.module.css";
+import { NextPage } from "next";
 
-const about = () => {
+const About: NextPage = () => {
   return (
     <BaseLayout>
       <main className="lg:ml-[16.5%] lg:mr-[20%] px-8 lg:px-0">
@@ -47,4 +48,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

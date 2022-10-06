@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { GrLinkedinOption } from "react-icons/gr";
 import { MdMail } from "react-icons/md";
@@ -53,7 +54,22 @@ const Footer = () => {
       </div>
 
       {pathname === "/" && (
-        <div className="lg:hidden flex items-center justify-center absolute w-screen top-[80%] bottom-0 flex-col">
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="lg:hidden flex items-center justify-center absolute w-screen top-[80%] bottom-0 flex-col"
+        >
           <ul className="flex">
             <li className="px-7">
               <a
@@ -94,7 +110,7 @@ const Footer = () => {
               ROGER
             </a>
           </p>
-        </div>
+        </motion.div>
       )}
     </footer>
   );
