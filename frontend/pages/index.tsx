@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 import { BsPlayFill } from "react-icons/bs";
 import styles from "../src/styles/Home.module.css";
 
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Home: NextPage = () => {
   return (
     <BaseLayout>
@@ -17,10 +26,23 @@ const Home: NextPage = () => {
             21&apos;
           </p>
           <div className="lg:mt-12 mt-12">
-            <h2 className="lg:text-[90px] sm:text-5xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-3xl text-center lg:text-left">
-              SOFTWARE <br />{" "}
-              <span className={`${styles.text_stroke}`}> DEVELOPER</span>
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="lg:text-[90px] sm:text-5xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-3xl text-center lg:text-left"
+            >
+              SOFTWARE
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+              className={`${styles.text_stroke}`}
+            >
+              {" "}
+              DEVELOPER
+            </motion.h2>
           </div>
           <p className="text-xs lg:absolute lg:bottom-0 lg:mb-[5%] lg:ml-[1px] tracking-widest hidden lg:block">
             MERN STACK DEVELOPER & DATA ANALYST
@@ -47,7 +69,7 @@ const Home: NextPage = () => {
             transition={{
               delay: 1.5,
             }}
-            className="flex justify-center mt-[12%] lg:hidden"
+            className="flex justify-center mt-[12%] sm:mt-[8%] lg:hidden"
           >
             <button className="flex animate-bounce opacity-90 hover:opacity-100 hover:text-[#dad7d7] hover:bg-[#272727] bg-[#dad7d7] px-4 rounded-lg text-[#272727] py-2 items-center text-xs sm:text-sm md:text-base font-semibold tracking-wide">
               <Link href="/portfolio">EXPLORE</Link>
