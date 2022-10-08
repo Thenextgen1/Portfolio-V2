@@ -1,12 +1,18 @@
 import BaseLayout from "../src/layout";
-import { Experience } from "../src/components";
+import { Experiences } from "../src/components";
 import styles from "../src/styles/About.module.css";
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
+import { Experience } from "../typings";
+import { fetchExperience } from "../src/utils/fetchExperience";
 
-const About: NextPage = () => {
+type Props = {
+  experience: Experience[];
+};
+
+const About = ({ experience }: Props) => {
   return (
     <BaseLayout>
-      <main className="lg:ml-[16.5%] lg:mr-[20%] px-8 lg:px-0">
+      <main className="lg:ml-[16.5%] lg:mr-[20%] px-8 lg:px-0 snap-y snap-mandatory">
         <section className="-mt-20">
           <p className="text-xs tracking-wide font-light py-2 hidden lg:block">
             LAGOS
@@ -41,7 +47,7 @@ const About: NextPage = () => {
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90">
             EXPERIENCE
           </h2>
-          <Experience />
+          <Experiences experience={experience} />
         </section>
       </main>
     </BaseLayout>
@@ -49,3 +55,16 @@ const About: NextPage = () => {
 };
 
 export default About;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const experience: Experience[] = await fetchExperience();
+
+  return {
+    props: {
+      experience,
+    },
+    // Re-generate the page at most once every 10 second
+
+    revalidate: 10,
+  };
+};
