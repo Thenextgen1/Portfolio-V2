@@ -27,7 +27,7 @@ const DesktopNav = () => {
 
       {pathname === "/about" && (
         <div
-          className="flex items-center flex-col cursor-pointer"
+          className=" flex items-center flex-col cursor-pointer"
           onClick={() => Router.push("/")}
         >
           <p>

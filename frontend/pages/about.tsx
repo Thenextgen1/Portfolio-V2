@@ -65,6 +65,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
     // Re-generate the page at most once every 10 second
 
-    revalidate: 10,
+    // revalidate: 10,
   };
 };
