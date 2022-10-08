@@ -62,7 +62,7 @@ const MobileNav = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center lg:hidden">
+    <nav className="flex justify-between items-center lg:hidden cursor-pointer">
       <h1 className=" font-semibold tracking-wider sm:text-lg z-20">
         <Link href="/">ELIJAH OHIWEREI</Link>
       </h1>

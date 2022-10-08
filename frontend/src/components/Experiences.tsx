@@ -7,7 +7,7 @@ type Props = {
 const Experiences = ({ experience }: Props) => {
   console.log(experience);
 
-  const th = experience.map((e) => <span id={e._id}>{e.company}</span>);
+  const th = experience.map((e) => <span key={e._id}>{e.company}</span>);
 
   return (
     <div>
