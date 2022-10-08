@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules
+frontend/node_modules
 /.pnp
 .pnp.js
 
@@ -18,6 +18,9 @@ node_modules
 # misc
 .DS_Store
 *.pem
+
+
+sanity/node_modules
 
 # debug
 npm-debug.log*
