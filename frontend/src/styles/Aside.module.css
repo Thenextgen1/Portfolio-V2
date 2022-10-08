@@ -5,7 +5,7 @@
     height: 18px;
     -webkit-animation: spin 1s linear 1s;
     /* Safari */
-    animation: spin 1s linear 1s;
+    animation: spin 1s linear 0.5s;
 }
 
 @-webkit-keyframes spin {
