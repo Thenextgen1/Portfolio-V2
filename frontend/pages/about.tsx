@@ -1,19 +1,15 @@
 import BaseLayout from "../src/layout";
 import { Experiences } from "../src/components";
 import styles from "../src/styles/About.module.css";
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps } from "next";
 import { Experience } from "../typings";
-import { fetchExperience } from "../src/utils/fetchExperience";
+// import { fetchExperience } from "../src/utils/fetchExperience";
 import { sanityClient } from "../sanity";
 import { groq } from "next-sanity";
 
 type Props = {
   experience: Experience[];
 };
-
-const query = groq`
-*[_type == "experience"]
-`;
 
 const About = ({ experience }: Props) => {
   return (
@@ -62,7 +58,8 @@ const About = ({ experience }: Props) => {
 
 export default About;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetStaticProps<Props> = async () => {
+  const query = groq`*[_type == "experience"]`;
   const res = await sanityClient.fetch(query);
 
   const experience: Experience[] = res;
@@ -72,8 +69,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       experience,
     },
     // Re-generate the page at most once every 10 second
-
-    revalidate: 10,
   };
 };
 
