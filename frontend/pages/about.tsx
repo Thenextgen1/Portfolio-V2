@@ -4,10 +4,16 @@ import styles from "../src/styles/About.module.css";
 import { GetStaticProps, NextPage } from "next";
 import { Experience } from "../typings";
 import { fetchExperience } from "../src/utils/fetchExperience";
+import { sanityClient } from "../sanity";
+import { groq } from "next-sanity";
 
 type Props = {
   experience: Experience[];
 };
+
+const query = groq`
+*[_type == "experience"]
+`;
 
 const About = ({ experience }: Props) => {
   return (
@@ -57,7 +63,9 @@ const About = ({ experience }: Props) => {
 export default About;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const experience: Experience[] = await fetchExperience();
+  const res = await sanityClient.fetch(query);
+
+  const experience: Experience[] = res;
 
   return {
     props: {
@@ -65,6 +73,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
     // Re-generate the page at most once every 10 second
 
-    // revalidate: 10,
+    revalidate: 10,
   };
 };
+
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const experience: Experience[] = await fetchExperience();
+
+//   return {
+//     props: {
+//       experience,
+//     },
+//     // Re-generate the page at most once every 10 second
+
+//     // revalidate: 10,
+//   };
+// };
