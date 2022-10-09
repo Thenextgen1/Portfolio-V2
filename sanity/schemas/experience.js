@@ -4,18 +4,18 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title_of_job',
-      title: 'Job Title',
+      name: 'titleOfJob',
+      title: 'JobTitle',
       type: 'text',
     },
     {
-      name: 'duration_of_Job',
-      title: 'Job Duration',
+      name: 'durationOfJob',
+      title: 'JobDuration',
       type: 'text',
     },
     {
       name: 'location',
-      title: 'Job Location',
+      title: 'JobLocation',
       type: 'text',
     },
     {
