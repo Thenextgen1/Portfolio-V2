@@ -49,7 +49,7 @@ const About = ({ experience }: Props) => {
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90">
             EXPERIENCE
           </h2>
-          <Experiences experience={experience} />
+          {/* <Experiences experience={experience} /> */}
         </section>
       </main>
     </BaseLayout>
@@ -58,19 +58,19 @@ const About = ({ experience }: Props) => {
 
 export default About;
 
-export const getServerSideProps: GetStaticProps<Props> = async () => {
-  const query = groq`*[_type == "experience"]`;
-  const res = await sanityClient.fetch(query);
+// export const getServerSideProps: GetStaticProps<Props> = async () => {
+//   const query = groq`*[_type == "experience"]`;
+//   const res = await sanityClient.fetch(query);
 
-  const experience: Experience[] = res;
+//   const experience: Experience[] = res;
 
-  return {
-    props: {
-      experience,
-    },
-    // Re-generate the page at most once every 10 second
-  };
-};
+//   return {
+//     props: {
+//       experience,
+//     },
+//     // Re-generate the page at most once every 10 second
+//   };
+// };
 
 // export const getStaticProps: GetStaticProps<Props> = async () => {
 //   const experience: Experience[] = await fetchExperience();
