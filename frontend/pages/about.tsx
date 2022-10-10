@@ -2,6 +2,9 @@ import BaseLayout from "../src/layout";
 import styles from "../src/styles/About.module.css";
 import { Experience } from "../typings";
 import { groq } from "next-sanity";
+import { GetStaticProps } from "next";
+import { sanityClient } from "../sanity";
+import { Experiences } from "../src/components";
 
 type Props = {
   experience: Experience[];
@@ -58,30 +61,16 @@ const About = ({ experience }: Props) => {
 
 export default About;
 
-// export const getServerSideProps: GetStaticProps<Props> = async () => {
-//   const query = groq`*[_type == "experience"]`;
-//   const res = await sanityClient.fetch(query);
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const res = await sanityClient.fetch(query);
+  const experience: Experience[] = res;
 
-//   const experience: Experience[] = res;
+  return {
+    props: {
+      experience,
+    },
+    // Re-generate the page at most once every 10 second
 
-//   return {
-//     props: {
-//       experience,
-//     },
-//     // Re-generate the page at most once every 10 second
-//   };
-// };
-
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//   const res = await sanityClient.fetch(query);
-//   const experience: Experience[] = res;
-
-//   return {
-//     props: {
-//       experience,
-//     },
-//     // Re-generate the page at most once every 10 second
-
-//     revalidate: 10,
-//   };
-// };
+    revalidate: 10,
+  };
+};
