@@ -52,7 +52,7 @@ const About = ({ experience }: Props) => {
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90">
             EXPERIENCE
           </h2>
-          {/* <Experiences experience={experience} /> */}
+          <Experiences experience={experience} />
         </section>
       </main>
     </BaseLayout>
