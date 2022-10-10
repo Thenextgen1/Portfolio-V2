@@ -4,8 +4,8 @@
     "name": "portfolio-v2"
   },
   "api": {
-    "projectId": "placeholder",
-    "dataset": "placeholder"
+    "projectId": "p828gkx7",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
