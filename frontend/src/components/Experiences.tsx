@@ -1,18 +1,20 @@
 import { Experience } from "../../typings";
+import styles from "../styles/Experience.module.css";
 
 type Props = {
-  experience: Experience[];
+  experience: Experience;
 };
 
 const Experiences = ({ experience }: Props) => {
-  console.log(experience);
-
-  const th = experience.map((e) => <span key={e._id}>{e.company}</span>);
-
   return (
-    <div>
-      experience
-      <p>{th}</p>
+    <div className={styles.container}>
+      <div className="flex sm:flex-row flex-col sm:items-center">
+        <p className="text-xs sm:w-[150px]">{experience.durationOfJob}</p>
+        <h4 className="text-xs sm:ml-8 py-1">{experience.titleOfJob}</h4>
+      </div>
+      <p className="text-xs">
+        {experience.company}, {experience.location}
+      </p>
     </div>
   );
 };
