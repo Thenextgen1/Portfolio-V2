@@ -7,8 +7,13 @@ interface SanityBody {
 
 export interface Experience extends SanityBody {
   _type: "experience";
-  location: string;
-  duration_of_Job: string;
-  title_of_job: string;
-  company: string;
+  location: text;
+  durationOfJob: text;
+  titleOfJob: text;
+  company: text;
+}
+
+export interface TechStack extends SanityBody {
+  _type: "techStack";
+  techStack: string;
 }
