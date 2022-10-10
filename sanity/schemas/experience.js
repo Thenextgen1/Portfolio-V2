@@ -6,22 +6,22 @@ export default {
     {
       name: 'titleOfJob',
       title: 'JobTitle',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'durationOfJob',
       title: 'JobDuration',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'location',
       title: 'JobLocation',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'company',
       title: 'Company',
-      type: 'string',
+      type: 'text',
     }
   ],
 }
