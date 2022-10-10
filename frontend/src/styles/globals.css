@@ -12,7 +12,9 @@
 :root {
     --scrollColor: rgba(153, 153, 153, 0.425);
     --borderColor: #999;
+    --spinOpacColor: rgba(80, 79, 79, 0.14);
     --menuColor: rgb(218, 215, 215);
+    --spinColor: rgb(189, 189, 189);
     --menu-background-color: #272727;
 }
 

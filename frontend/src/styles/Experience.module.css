@@ -1,0 +1,12 @@
+.container {
+    @apply py-8 uppercase flex flex-col opacity-75 tracking-wider;
+    border-bottom: 0.8px solid rgba(255, 255, 255, 0.196);
+}
+
+
+
+@media(min-width: 640px) {
+    .container {
+        @apply flex-row items-center justify-between;
+    }
+}

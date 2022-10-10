@@ -12,7 +12,7 @@
     /* transition: all 300ms ease-in-out; */
     transition: transform .75s cubic-bezier(.5, .1, 0, .99), border-bottom 0.5s linear;
     will-change: transform;
-    @apply pb-1
+    @apply pb-1;
 }
 
 .quick_links>li:nth-child(odd):hover:after {

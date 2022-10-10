@@ -1,11 +1,11 @@
 .loader {
-    border: 2px solid var(--scrollColor);
+    border: 2px solid var(--spinColor);
     border-radius: 50%;
     width: 18px;
     height: 18px;
-    -webkit-animation: spin 1s linear 1s;
+    -webkit-animation: spin 2s linear 1s;
     /* Safari */
-    animation: spin 1s linear 0.5s;
+    animation: spin 2s linear 0s;
 }
 
 @-webkit-keyframes spin {
@@ -24,11 +24,11 @@
     }
 
     75% {
-        border-top: 2px solid var(--borderColor);
+        border-top: 2px solid var(--spinOpacColor);
     }
 
     100% {
         transform: rotate(360deg);
-        border: 2px solid var(--scrollColor);
+        border: 2px solid var(--spinColor);
     }
 }
