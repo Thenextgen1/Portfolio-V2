@@ -30,7 +30,11 @@ const Projects = ({ project }: Props) => {
       </div>
       <div>
         <p className="text-xs cursor-pointer">
-          <a href={project.url}>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiFillEye
               size="1.3em"
               style={{ display: "inline-block", marginRight: "0.5em" }}
