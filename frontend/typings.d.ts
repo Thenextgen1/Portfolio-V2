@@ -17,3 +17,11 @@ export interface TechStack extends SanityBody {
   _type: "techStack";
   techStack: string;
 }
+
+export interface Project extends SanityBody {
+  _type: "project";
+  titleOfProject: string;
+  techStack: string[];
+  description: text;
+  url: string;
+}
