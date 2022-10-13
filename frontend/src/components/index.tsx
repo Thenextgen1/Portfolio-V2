@@ -5,3 +5,4 @@ export { default as MobileNav } from "./BaseLayout/Menus/MobileNav";
 export { default as Aside } from "./BaseLayout/Aside";
 export { default as Experiences } from "./Experiences";
 export { default as Stack } from "./Stack";
+export { default as Projects } from "./Projects";

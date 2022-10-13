@@ -5,6 +5,7 @@ import { groq } from "next-sanity";
 import { GetStaticProps } from "next";
 import { sanityClient } from "../sanity";
 import { Experiences, Stack } from "../src/components";
+import { motion } from "framer-motion";
 
 type Props = {
   experience: Experience[];
@@ -33,14 +34,19 @@ const About = ({ experience, techStack }: Props) => {
         </section>
         <section className="lg:mt-20 mt-32">
           <div>
-            <h2 className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl">
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+              className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl"
+            >
               NIGERIAN - BASED <br /> FRONTEND
               <br /> <span className={`${styles.text_stroke}`}>
                 DEVELOPER
               </span>{" "}
               & <br /> DATA{" "}
               <span className={`${styles.text_stroke}`}>ANALYST</span>{" "}
-            </h2>
+            </motion.h2>
           </div>
           <div className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10">
             <p className="tracking-wider opacity-80 text-sm sm:text-base leading-loose ">
@@ -53,7 +59,12 @@ const About = ({ experience, techStack }: Props) => {
           </div>
         </section>
 
-        <section className="lg:mt-36 mt-16">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="lg:mt-36 mt-16"
+        >
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-12">
             EXPERIENCE
           </h2>
@@ -65,7 +76,7 @@ const About = ({ experience, techStack }: Props) => {
               />
             ))}
           </div>
-        </section>
+        </motion.section>
 
         <section className="mt-28">
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-8">

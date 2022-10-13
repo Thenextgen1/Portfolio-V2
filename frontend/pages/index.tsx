@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import BaseLayout from "../src/layout";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { BsPlayFill } from "react-icons/bs";
 import styles from "../src/styles/Home.module.css";
+import { Router, useRouter } from "next/router";
 
 const banner = {
   animate: {
@@ -15,6 +16,8 @@ const banner = {
 };
 
 const Home: NextPage = () => {
+  const { pathname } = useRouter();
+
   return (
     <BaseLayout>
       <main className="lg:ml-[17%] px-8 lg:px-0">
@@ -29,15 +32,18 @@ const Home: NextPage = () => {
             <motion.h2
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "linear" }}
               className="lg:text-[90px] sm:text-5xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-3xl text-center lg:text-left"
             >
               SOFTWARE
             </motion.h2>
+
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
               className={`${styles.text_stroke}`}
             >
               {" "}
