@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
@@ -8,6 +9,7 @@ import styles from "../../styles/Footer.module.css";
 
 const Footer = () => {
   const { pathname } = useRouter();
+  const [transformArrow, setTransformArrow] = useState(false);
 
   const arrowStyle = {
     filter:
@@ -16,11 +18,25 @@ const Footer = () => {
     transition: "opacity .3s linear",
   };
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="text-xs lg:fixed lg:bottom-0 lg:mb-[5%] lg:mr-[5%] lg:right-0">
-      <div className={styles.scroll_div}>
-        <div className="flex lg:flex-col  ">
-          <div className={styles.arrow_cont}>
+      <div
+        className={styles.scroll_div}
+        onClick={handleScroll}
+      >
+        <div className="flex lg:flex-col z-50">
+          <motion.div
+            animate={{ rotate: 180 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className={styles.arrow_cont}
+          >
             <Image
               src="/images/arrow_down.svg"
               alt="arrow_down"
@@ -28,28 +44,36 @@ const Footer = () => {
               height="20px"
               style={arrowStyle}
             />
-          </div>
-          <div className={styles.arrow_cont}>
+          </motion.div>
+          <motion.div
+            animate={{ rotate: 180 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className={styles.arrow_cont}
+          >
             <Image
               src="/images/arrow_down.svg"
-              alt="arrow_down.svg"
+              alt="arrow_down"
               width="20px"
               height="20px"
               style={arrowStyle}
             />
-          </div>
-          <div className={styles.arrow_cont}>
+          </motion.div>
+          <motion.div
+            animate={{ rotate: 180 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className={styles.arrow_cont}
+          >
             <Image
               src="/images/arrow_down.svg"
-              alt="arrow_down.svg"
+              alt="arrow_down"
               width="20px"
               height="20px"
               style={arrowStyle}
             />
-          </div>
+          </motion.div>
         </div>
-        <p className="text-[7.5px] tracking-wider font-Synocopate hidden lg:block">
-          SCROLL
+        <p className="text-[7.5px] tracking-wider font-Synocopate hidden lg:block text-white">
+          Top
         </p>
       </div>
 
