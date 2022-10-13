@@ -1,0 +1,17 @@
+.card {
+    @apply pl-6 py-6 tracking-wider flex-col flex justify-between mb-5;
+    background-color: var(--cardColor);
+    height: 220px;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media(min-width: 640px) {
+    .card {
+        @apply p-8 pl-10;
+    }
+}

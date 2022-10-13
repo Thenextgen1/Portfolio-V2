@@ -6,6 +6,7 @@
     .scroll_div {
         @apply flex justify-center items-center rounded-full flex-col;
         @apply h-[132px] w-[132px];
+        z-index: 100;
     }
 
     .scroll_div::after {

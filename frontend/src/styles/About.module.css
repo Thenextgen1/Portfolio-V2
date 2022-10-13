@@ -33,9 +33,13 @@
     width: 200px;
 }
 
-@media(min-width: 640px) {
+@media(min-width: 375px) {
     .about_links {
         @apply flex flex-row;
+    }
+
+    .about_links>li:nth-of-type(2) {
+        @apply py-0 px-10;
     }
 }
 
