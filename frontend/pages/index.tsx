@@ -31,9 +31,12 @@ const Home: NextPage = () => {
           <div className="lg:mt-12 mt-12">
             <motion.h2
               initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "linear" }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.1, ease: "linear" },
+              }}
+              exit={{ opacity: 0, y: -30, transition: { duration: 0.5 } }}
               className="lg:text-[90px] sm:text-5xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-3xl text-center lg:text-left"
             >
               SOFTWARE
@@ -41,9 +44,12 @@ const Home: NextPage = () => {
 
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.6, ease: "linear" },
+              }}
+              exit={{ opacity: 0, y: -30, transition: { duration: 0.5 } }}
               className={`${styles.text_stroke}`}
             >
               {" "}
@@ -55,15 +61,79 @@ const Home: NextPage = () => {
           </p>
 
           <p className="lg:hidden text-center mt-12 text-[13px] sm:text-lg tracking-widest leading-relaxed text-LightGray">
-            I am a <span className="text-Gray">frontend developer</span> . My
-            skills and <span className="text-Gray">expertise</span> lie in
-            creating <span className="text-Gray">web</span> and{" "}
-            <span className="text-Gray">mobile</span> applications in the{" "}
-            <span className="text-Gray">React </span>
-            ecosystem using <span className="text-Gray">modern</span> and
-            best-react practices. <span className="text-Gray">I</span> am
-            currently <span className="text-Gray">mastering</span> the{" "}
-            <span className="text-Gray">MERN</span> STACK as well.
+            I am a{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              frontend developer
+            </motion.span>{" "}
+            . My skills and{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              expertise
+            </motion.span>{" "}
+            lie in creating{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              web
+            </motion.span>{" "}
+            and{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              mobile
+            </motion.span>{" "}
+            applications in the{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              React{" "}
+            </motion.span>
+            ecosystem using{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              modern
+            </motion.span>{" "}
+            and best-react practices.{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              I
+            </motion.span>{" "}
+            am currently <span className="text-Gray">mastering</span> the{" "}
+            <motion.span
+              initial={{ opacity: 0.2 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              className="text-Gray"
+            >
+              MERN
+            </motion.span>{" "}
+            STACK as well
           </p>
           <motion.div
             initial={{
