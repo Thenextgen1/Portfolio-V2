@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import { groq } from "next-sanity";
+import Link from "next/link";
 import { sanityClient } from "../sanity";
 import { Projects } from "../src/components";
 import BaseLayout from "../src/layout";
@@ -18,7 +19,7 @@ const Portfolio = ({ project }: Props) => {
     <BaseLayout>
       <main className="lg:ml-[17%] lg:mr-[20%] px-8 lg:px-0">
         <h2 className="text-xs font-bold lg:ml-5">FEATURED</h2>
-        <section className="mt-16 lg:ml-5">
+        <section className="lg:mt-16 lg:ml-5 mt-8">
           {project.map((project) => (
             <Projects
               key={project._id}
@@ -26,6 +27,24 @@ const Portfolio = ({ project }: Props) => {
             />
           ))}
         </section>
+
+        <ul className="mt-20 flex justify-center pb-6 text-xs">
+          <li className="bg-cardColor mr-2 px-4 py-2 w-[40%] text-center">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="bg-cardColor px-4 py-2 w-[40%] text-center">
+            <a
+              href="/files/Elijah_Ohiwerei_Resume.pdf"
+              download
+            >
+              Résumé
+            </a>
+          </li>
+        </ul>
+
+        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 opacity-80">
+          &#169; 2022 - Elijah Ohiwerei
+        </h5>
       </main>
     </BaseLayout>
   );
