@@ -20,6 +20,11 @@ const stackQuery = groq`
 *[_type == "techStack"]
 `;
 
+const childVariants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, y: 100 },
+};
+
 const About = ({ experience, techStack }: Props) => {
   return (
     <BaseLayout>
@@ -48,7 +53,12 @@ const About = ({ experience, techStack }: Props) => {
               <span className={`${styles.text_stroke}`}>ANALYST</span>{" "}
             </motion.h2>
           </div>
-          <div className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+            className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10"
+          >
             <p className="tracking-wider opacity-80 text-sm sm:text-base leading-loose ">
               Web design, User Interface develeopment{" "}
               <br className="hidden lg:block" /> and data analysis are all areas
@@ -56,12 +66,13 @@ const About = ({ experience, techStack }: Props) => {
               <br className="hidden lg:block" /> Currently exploring the
               decentralised web.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         <motion.section
           initial="hidden"
           whileInView="visible"
+          variants={childVariants}
           viewport={{ once: true }}
           className="lg:mt-36 mt-16"
         >
@@ -78,7 +89,13 @@ const About = ({ experience, techStack }: Props) => {
           </div>
         </motion.section>
 
-        <section className="lg:mt-28 mt-14">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={childVariants}
+          viewport={{ once: true }}
+          className="lg:mt-28 mt-14"
+        >
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-8">
             TECH STACK
           </h2>
@@ -90,9 +107,15 @@ const About = ({ experience, techStack }: Props) => {
               />
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="lg:mt-56 mt-12">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={childVariants}
+          viewport={{ once: true }}
+          className="lg:mt-56 mt-12"
+        >
           <h4 className="text-xl lg:text-5xl tracking-wide font-Synocopate font-semibold">
             SAY <br /> <span className={`${styles.text_stroke}`}> HELLO</span>
           </h4>
@@ -106,9 +129,15 @@ const About = ({ experience, techStack }: Props) => {
               hello@elijahO.com
             </a>
           </p>
-        </section>
+        </motion.section>
 
-        <section className="uppercase hidden lg:pb-8 lg:mt-40 mt-12 opacity-75 text-sm tracking-widest sm:flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          variants={childVariants}
+          viewport={{ once: true }}
+          className="uppercase hidden lg:pb-8 lg:mt-40 mt-12 opacity-75 text-sm tracking-widest sm:flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center"
+        >
           <div className="py-16">
             <h5>&#169; 2022 - Elijah Ohiwerei</h5>
           </div>
@@ -123,7 +152,7 @@ const About = ({ experience, techStack }: Props) => {
               <a href="">Dribble</a>
             </li>
           </ul>
-        </section>
+        </motion.section>
       </main>
     </BaseLayout>
   );

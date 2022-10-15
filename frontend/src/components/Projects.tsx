@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { AiFillEye } from "react-icons/ai";
 import { Project } from "../../typings";
@@ -7,11 +8,21 @@ type Props = {
   project: Project;
 };
 
-const Projects = ({ project }: Props) => {
-  console.log(project.techStack);
+const childVariants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, y: 100 },
+};
 
+const Projects = ({ project }: Props) => {
   return (
-    <div className={styles.card}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={childVariants}
+      whileHover={{ scale: 1.05 }}
+      viewport={{ once: true }}
+      className={styles.card}
+    >
       <div>
         <h2 className="text-xl uppercase font-bold">
           {project.titleOfProject}
@@ -43,7 +54,7 @@ const Projects = ({ project }: Props) => {
           </a>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

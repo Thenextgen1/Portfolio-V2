@@ -7,9 +7,13 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { MdMail } from "react-icons/md";
 import styles from "../../styles/Footer.module.css";
 
+const childVariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: 100 },
+};
+
 const Footer = () => {
   const { pathname } = useRouter();
-  const [transformArrow, setTransformArrow] = useState(false);
 
   const arrowStyle = {
     filter:
@@ -139,19 +143,10 @@ const Footer = () => {
 
       {pathname !== "/" && (
         <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
+          initial="hidden"
+          whileInView="visible"
+          variants={childVariants}
+          viewport={{ once: true }}
           className="lg:hidden flex items-center justify-center py-12 flex-col mt-8"
         >
           <ul className="flex">

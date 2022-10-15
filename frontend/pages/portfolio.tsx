@@ -28,11 +28,11 @@ const Portfolio = ({ project }: Props) => {
           ))}
         </section>
 
-        <ul className="mt-20 flex justify-center pb-6 text-xs">
-          <li className="bg-cardColor mr-2 px-4 py-2 w-[40%] text-center">
+        <ul className="mt-20 flex justify-center pb-6 text-xs lg:text-sm tracking-widest">
+          <li className="bg-cardColor mr-2 px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer">
             <Link href="/">Home</Link>
           </li>
-          <li className="bg-cardColor px-4 py-2 w-[40%] text-center">
+          <li className="bg-cardColor px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer">
             <a
               href="/files/Elijah_Ohiwerei_Resume.pdf"
               download
@@ -42,7 +42,7 @@ const Portfolio = ({ project }: Props) => {
           </li>
         </ul>
 
-        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 opacity-80">
+        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-14 opacity-80">
           &#169; 2022 - Elijah Ohiwerei
         </h5>
       </main>
