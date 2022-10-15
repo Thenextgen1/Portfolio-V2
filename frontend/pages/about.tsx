@@ -35,8 +35,8 @@ const About = ({ experience, techStack }: Props) => {
         <section className="lg:mt-20 mt-32">
           <div>
             <motion.h2
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
               className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl"
             >
@@ -65,7 +65,7 @@ const About = ({ experience, techStack }: Props) => {
           viewport={{ once: true }}
           className="lg:mt-36 mt-16"
         >
-          <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-12">
+          <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 sm:mb-12">
             EXPERIENCE
           </h2>
           <div className="mt-6 pb-10">
@@ -78,7 +78,7 @@ const About = ({ experience, techStack }: Props) => {
           </div>
         </motion.section>
 
-        <section className="mt-28">
+        <section className="lg:mt-28 mt-14">
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-8">
             TECH STACK
           </h2>
@@ -108,7 +108,7 @@ const About = ({ experience, techStack }: Props) => {
           </p>
         </section>
 
-        <section className="uppercase lg:pb-8 lg:mt-40 mt-12 opacity-75 text-sm tracking-widest flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center">
+        <section className="uppercase hidden lg:pb-8 lg:mt-40 mt-12 opacity-75 text-sm tracking-widest sm:flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center">
           <div className="py-16">
             <h5>&#169; 2022 - Elijah Ohiwerei</h5>
           </div>
