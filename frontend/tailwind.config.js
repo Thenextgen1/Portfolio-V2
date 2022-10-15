@@ -12,7 +12,8 @@ module.exports = {
       },
       colors: {
         Gray: '#999',
-        LightGray: 'rgba(153, 153, 153, 0.425)'
+        LightGray: 'rgba(153, 153, 153, 0.425)',
+        cardColor: 'rgba(51, 50, 50, 0.429)'
       }
     },
   },
