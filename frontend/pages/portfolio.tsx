@@ -42,7 +42,7 @@ const Portfolio = ({ project }: Props) => {
           </li>
         </ul>
 
-        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-14 opacity-80">
+        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-16 opacity-80">
           &#169; 2022 - Elijah Ohiwerei
         </h5>
       </main>
