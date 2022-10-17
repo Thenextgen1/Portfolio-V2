@@ -141,13 +141,31 @@ const About = ({ experience, techStack }: Props) => {
           </div>
           <ul className={styles.about_links}>
             <li>
-              <a href="">Linkedin</a>
+              <a
+                href="https://www.linkedin.com/in/elijah-ohiwerei-b7425b1b4/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Linkedin
+              </a>
             </li>
             <li className="sm:px-10 py-6 sm:py-0">
-              <a href="">Github</a>
+              <a
+                href="https://github.com/thenextgen1"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
             </li>
             <li>
-              <a href="">Dribble</a>
+              <a
+                href="https://dribbble.com/ohimai"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Dribble
+              </a>
             </li>
           </ul>
         </motion.section>
