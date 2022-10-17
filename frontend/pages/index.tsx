@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                 transition: { duration: 0.5, delay: 0.6, ease: "linear" },
               }}
               exit={{ opacity: 0, y: -30, transition: { duration: 0.5 } }}
-              className={`${styles.text_stroke}`}
+              className="text_stroke"
             >
               DEVELOPER
             </motion.h2>
