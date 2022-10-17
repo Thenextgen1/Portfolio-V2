@@ -46,11 +46,11 @@ const About = ({ experience, techStack }: Props) => {
               className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl"
             >
               NIGERIAN - BASED <br /> FRONTEND
-              <br /> <span className={`${styles.text_stroke}`}>
+              <br /> <span className={`${styles.about_stroke}`}>
                 DEVELOPER
               </span>{" "}
               & <br /> DATA{" "}
-              <span className={`${styles.text_stroke}`}>ANALYST</span>{" "}
+              <span className={`${styles.about_stroke}`}>ANALYST</span>{" "}
             </motion.h2>
           </div>
           <motion.div
@@ -116,7 +116,7 @@ const About = ({ experience, techStack }: Props) => {
           className="lg:mt-56 mt-12"
         >
           <h4 className="text-xl lg:text-5xl tracking-wide font-Synocopate font-semibold">
-            SAY <br /> <span className={`${styles.text_stroke}`}> HELLO</span>
+            SAY <br /> <span className={`${styles.about_stroke}`}> HELLO</span>
           </h4>
 
           <p className={styles.mail_link}>
