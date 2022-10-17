@@ -8,6 +8,8 @@
 .card:hover {
     transform: scale(1.05);
     cursor: pointer;
+    @apply bg-LightGray;
+    opacity: 1;
 }
 
 @media(min-width: 640px) {

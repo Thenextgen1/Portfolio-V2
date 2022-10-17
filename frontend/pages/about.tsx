@@ -110,9 +110,8 @@ const About = ({ experience, techStack }: Props) => {
         </motion.section>
 
         <motion.section
-          initial="hidden"
-          whileInView="visible"
-          variants={childVariants}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
           viewport={{ once: true }}
           className="lg:mt-56 mt-12"
         >
@@ -134,7 +133,6 @@ const About = ({ experience, techStack }: Props) => {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          variants={childVariants}
           viewport={{ once: true }}
           className="uppercase hidden lg:pb-8 lg:mt-40 mt-12 opacity-75 text-sm tracking-widest sm:flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center"
         >
