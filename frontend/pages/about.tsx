@@ -21,7 +21,7 @@ const stackQuery = groq`
 `;
 
 const childVariants = {
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.4 } },
   hidden: { opacity: 0, y: 100 },
 };
 
@@ -29,20 +29,24 @@ const About = ({ experience, techStack }: Props) => {
   return (
     <BaseLayout>
       <main className="lg:ml-[16.5%] lg:mr-[20%] px-8 lg:px-0 snap-y snap-mandatory">
-        <section className="-mt-20">
+        <motion.section
+          exit={{ y: 60, transition: { duration: 0.5 } }}
+          className="-mt-20"
+        >
           <p className="text-xs tracking-wide font-light py-2 hidden lg:block">
             LAGOS
           </p>
           <p className="text-xs tracking-wide font-light hidden lg:block">
             21&apos;
           </p>
-        </section>
+        </motion.section>
         <section className="lg:mt-20 mt-32">
           <div>
             <motion.h2
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+              exit={{ opacity: 0, x: -100, transition: { duration: 0.5 } }}
               className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl"
             >
               NIGERIAN - BASED <br /> FRONTEND
@@ -57,6 +61,7 @@ const About = ({ experience, techStack }: Props) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+            exit={{ opacity: 0, x: 100, transition: { duration: 0.5 } }}
             className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10"
           >
             <p className="tracking-wider opacity-80 text-sm sm:text-base leading-loose ">
