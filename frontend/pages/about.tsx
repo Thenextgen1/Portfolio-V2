@@ -30,7 +30,7 @@ const About = ({ experience, techStack }: Props) => {
     <BaseLayout>
       <main className="lg:ml-[16.5%] lg:mr-[20%] px-8 lg:px-0 snap-y snap-mandatory">
         <motion.section
-          exit={{ y: 60, transition: { duration: 0.5 } }}
+          exit={{ y: 80, x: 10, transition: { duration: 0.5 } }}
           className="-mt-20"
         >
           <p className="text-xs tracking-wide font-light py-2 hidden lg:block">

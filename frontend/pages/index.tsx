@@ -9,12 +9,21 @@ const Home: NextPage = () => {
     <BaseLayout>
       <main className="lg:ml-[17%] px-8 lg:px-0">
         <section>
-          <p className="text-xs tracking-wide font-light py-2 hidden lg:block">
-            LAGOS
-          </p>
-          <p className="text-xs tracking-wide font-light hidden lg:block">
-            21&apos;
-          </p>
+          <motion.div
+            exit={{
+              opacity: 0,
+              y: -100,
+              x: -10,
+              transition: { duration: 0.5 },
+            }}
+          >
+            <p className="text-xs tracking-wide font-light py-2 hidden lg:block">
+              LAGOS
+            </p>
+            <p className="text-xs tracking-wide font-light hidden lg:block">
+              21&apos;
+            </p>
+          </motion.div>
           <div className="lg:mt-12 mt-12">
             <motion.h2
               initial={{ opacity: 0, y: -30 }}
