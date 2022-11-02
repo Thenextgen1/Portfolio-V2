@@ -1,23 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import BaseLayout from "../src/layout";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { BsPlayFill } from "react-icons/bs";
-import styles from "../src/styles/Home.module.css";
-import { Router, useRouter } from "next/router";
-
-const banner = {
-  animate: {
-    transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 const Home: NextPage = () => {
-  const { pathname } = useRouter();
-
   return (
     <BaseLayout>
       <main className="lg:ml-[17%] px-8 lg:px-0">
