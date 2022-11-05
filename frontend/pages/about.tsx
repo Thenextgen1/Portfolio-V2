@@ -60,7 +60,7 @@ const About = ({ experience, techStack }: Props) => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "linear" }}
             exit={{ opacity: 0, x: 100, transition: { duration: 0.5 } }}
             className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10"
           >
@@ -116,7 +116,11 @@ const About = ({ experience, techStack }: Props) => {
 
         <motion.section
           initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+          transition={{ duration: 1, delay: 0.65 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
           viewport={{ once: true }}
           className="lg:mt-56 mt-12"
         >
