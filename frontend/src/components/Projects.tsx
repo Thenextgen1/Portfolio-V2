@@ -15,13 +15,16 @@ const childVariants = {
 
 const Projects = ({ project }: Props) => {
   return (
-    <motion.div
+    <motion.a
       initial="hidden"
       whileInView="visible"
       variants={childVariants}
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
       className={styles.card}
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div>
         <h2 className="text-xl uppercase font-bold">
@@ -40,7 +43,7 @@ const Projects = ({ project }: Props) => {
         </p>
       </div>
       <div>
-        <p className="text-xs cursor-pointer">
+        <p className="text-xs cursor-pointer hover:text-white">
           <a
             href={project.url}
             target="_blank"
@@ -54,7 +57,7 @@ const Projects = ({ project }: Props) => {
           </a>
         </p>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 
