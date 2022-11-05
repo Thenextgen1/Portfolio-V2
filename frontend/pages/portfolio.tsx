@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import { groq } from "next-sanity";
 import Link from "next/link";
@@ -12,6 +13,11 @@ const query = groq`
 
 type Props = {
   project: Project[];
+};
+
+const childVariants = {
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0.2 },
 };
 
 const Portfolio = ({ project }: Props) => {
@@ -29,17 +35,29 @@ const Portfolio = ({ project }: Props) => {
         </section>
 
         <ul className="mt-20 flex justify-center pb-6 text-xs lg:text-sm tracking-widest">
-          <li className="bg-cardColor mr-2 px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer">
+          <motion.li
+            initial="hidden"
+            whileInView="visible"
+            variants={childVariants}
+            viewport={{ once: true }}
+            className="bg-cardColor mr-2 px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer"
+          >
             <Link href="/">Home</Link>
-          </li>
-          <li className="bg-cardColor px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer">
+          </motion.li>
+          <motion.li
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={childVariants}
+            className="bg-cardColor px-4 py-2 w-[40%] text-center hover:bg-LightGray cursor-pointer"
+          >
             <a
               href="/files/Elijah_Ohiwerei_Resume.pdf"
               download
             >
               Résumé
             </a>
-          </li>
+          </motion.li>
         </ul>
 
         <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-16 opacity-80">
