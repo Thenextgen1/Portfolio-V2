@@ -96,7 +96,7 @@ const Footer = () => {
           transition={{
             duration: 1,
           }}
-          className="lg:hidden flex items-center justify-center absolute w-screen top-[80%] bottom-0 flex-col"
+          className="lg:hidden flex items-center justify-center mt-16 pb-8  w-screen flex-col"
         >
           <ul className="flex">
             <li className="px-7">
