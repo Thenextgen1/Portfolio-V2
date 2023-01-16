@@ -16,7 +16,7 @@ const DesktopNav = () => {
         <ul className={styles.quick_links}>
           <li className="text-xs tracking-wide font-light">
             {pathname === "/portfolio" && <Link href="/">BACK TO HOME</Link>}
-            {pathname === "/" && <Link href="/portfolio">PORTFOLIO</Link>}
+            {pathname === "/" && <Link href="/portfolio">PROJECTS</Link>}
           </li>
           <li className="px-7 text-xs">/</li>
           <li className="text-xs tracking-wide font-light">
