@@ -5,8 +5,18 @@ import { motion } from "framer-motion";
 import { BsPlayFill } from "react-icons/bs";
 
 const Home: NextPage = () => {
+  const title = "Elijah Ohiwerei - Software Developer";
+  const description =
+    "Welcome to my portfolio website! Here, you will find a collection of my work and projects in Software Development. From fullstack web development to mobile development with flutter, I am dedicated to showcasing my skills and experience in the industry. Browse through my portfolio to learn more about me and my work.";
+  const keywords =
+    "web development, web design, MERN stack developer, REACT, NodeJs, MongoDB, HTML, CSS, JavaScript, responsive design, front-end development, back-end development, fullstack developer, mobile development, flutter developer";
+
   return (
-    <BaseLayout>
+    <BaseLayout
+      title={title}
+      description={description}
+      keywords={keywords}
+    >
       <main className="lg:ml-[17%] px-8 lg:px-0">
         <section>
           <motion.div

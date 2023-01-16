@@ -21,8 +21,18 @@ const childVariants = {
 };
 
 const Portfolio = ({ project }: Props) => {
+  const title = "Projects - Elijah Ohiwerei";
+  const description =
+    "Explore a collection of my best work and projects in the field of web development. From Vidom to Mainstack, you'll find a variety of my work and my approach to web development with the MERN stack. Browse through the projects page to learn more about my skills and experience in the industry.";
+  const keywords =
+    "web development, web design, MERN stack developer, REACT, NodeJs, MongoDB, HTML, CSS, JavaScript, responsive design, front-end development, back-end development, fullstack developer, mobile development, flutter developer";
+
   return (
-    <BaseLayout>
+    <BaseLayout
+      title={title}
+      description={description}
+      keywords={keywords}
+    >
       <main className="lg:ml-[17%] lg:mr-[20%] px-8 lg:px-0">
         <h2 className="text-xs font-bold lg:ml-5">FEATURED</h2>
         <section className="lg:mt-16 lg:ml-5 mt-8">
