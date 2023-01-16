@@ -4,10 +4,12 @@ import { Footer, Header, Aside } from "../components";
 
 interface Props {
   children: JSX.Element;
+  title: string;
+  description: string;
+  keywords: string;
 }
 
-const BaseLayout: FC<Props> = ({ children }) => {
-  const title = "Elijah Ohiwerei - Software Developer";
+const BaseLayout: FC<Props> = ({ children, title, description, keywords }) => {
   return (
     <>
       <Head>
@@ -15,6 +17,14 @@ const BaseLayout: FC<Props> = ({ children }) => {
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
+        />
+        <meta
+          name="keywords"
+          content={keywords}
+        />
+        <meta
+          name="author"
+          content="Elijah Ohiwerei"
         />
         <meta
           name="application-name"
@@ -34,7 +44,7 @@ const BaseLayout: FC<Props> = ({ children }) => {
         />
         <meta
           name="description"
-          content="Elijah Ohiwerei - Software Developer"
+          content={description}
         />
         <meta
           name="format-detection"
@@ -62,52 +72,57 @@ const BaseLayout: FC<Props> = ({ children }) => {
         />
         <meta
           name="twitter:card"
-          content="summary"
+          content="summary_large_image"
         />
         <meta
-          name="twitter:url"
-          content="https://yourdomain.com"
-        />
-        <meta
-          name="twitter:title"
-          content="Elijah Ohiwerei"
-        />
-        <meta
-          name="twitter:description"
-          content="Elijah Ohiwerei - Software Developer"
-        />
-        <meta
-          name="twitter:image"
-          content="https://yourdomain.com/icons/android-chrome-192x192.png"
+          name="twitter:site"
+          content="@ohimaiii"
         />
         <meta
           name="twitter:creator"
-          content="@DavidWShadow"
+          content="@ohimaiii"
+        />
+        <meta
+          name="twitter:title"
+          content="Elijah Ohiwerei - Portfolio Website"
+        />
+        <meta
+          name="twitter:description"
+          content={description}
+        />
+        <meta
+          name="twitter:image"
+          content="https://elijahohiwerei.netlify.app/icons/apple-touch-icon.png"
+        />
+
+        <meta
+          property="og:title"
+          content="Elijah Ohiwerei - Portfolio Website"
         />
         <meta
           property="og:type"
           content="website"
         />
         <meta
-          property="og:title"
-          content="Elijah Ohiwerei"
-        />
-        <meta
-          property="og:description"
-          content="Elijah Ohiwerei - Software Developer"
-        />
-        <meta
-          property="og:site_name"
-          content="Elijah Ohiwerei"
-        />
-        <meta
           property="og:url"
-          content="https://yourdomain.com"
+          content="https://www.elijahohiwerei.netlify.app/"
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/icons/apple-touch-icon.png"
+          content="https://elijahohiwerei.netlify.app/icons/apple-touch-icon.png"
         />
+        <meta
+          property="og:description"
+          content={description}
+        />
+        <meta
+          property="og:site_name"
+          content="Elijah Ohiwerei - Portfolio"
+        />
+        <link
+          rel="canonical"
+          href="https://elijahohiwerei.netlify.app/"
+        ></link>
       </Head>
       <Header />
       {children}
