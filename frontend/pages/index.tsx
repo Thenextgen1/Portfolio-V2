@@ -73,7 +73,7 @@ const Home: NextPage = () => {
               transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
               className="text-Gray"
             >
-              frontend developer
+              Software Developer
             </motion.span>{" "}
             . My skills and{" "}
             <motion.span
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
             >
               expertise
             </motion.span>{" "}
-            lie in creating{" "}
+            lies in creating{" "}
             <motion.span
               initial={{ opacity: 0.2 }}
               animate={{ opacity: 1 }}
@@ -129,16 +129,16 @@ const Home: NextPage = () => {
             >
               I
             </motion.span>{" "}
-            am currently <span className="text-Gray">mastering</span> the{" "}
+            am currently <span className="text-Gray">exploring</span> the{" "}
             <motion.span
               initial={{ opacity: 0.2 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
               className="text-Gray"
             >
-              MERN
+              AR / VR
             </motion.span>{" "}
-            STACK as well
+            Scene as well
           </p>
           <motion.div
             initial={{
