@@ -6,6 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { GrLinkedinOption } from "react-icons/gr";
 import { MdMail } from "react-icons/md";
 import styles from "../../styles/Footer.module.css";
+import Link from "next/link";
 
 const childVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -13,7 +14,7 @@ const childVariants = {
 };
 
 const Footer = () => {
-  const { pathname } = useRouter();
+  const router = useRouter();
 
   const arrowStyle = {
     filter:
@@ -29,11 +30,15 @@ const Footer = () => {
     });
   };
 
+  const changeRoute = () => {
+    router.push("/portfolio", "portfolio");
+  };
+
   return (
     <footer className="text-xs lg:fixed lg:bottom-0 lg:mb-[5%] lg:mr-[5%] lg:right-0">
       <div
-        className={styles.scroll_div}
-        onClick={handleScroll}
+        className={`${styles.scroll_div} cursor-pointer`}
+        onClick={router.pathname === "/" ? changeRoute : handleScroll}
       >
         <div className="flex lg:flex-col z-50">
           <motion.div
@@ -76,12 +81,18 @@ const Footer = () => {
             />
           </motion.div>
         </div>
-        <p className="text-[7.5px] tracking-wider font-Synocopate hidden lg:block text-white">
-          Top
-        </p>
+        {router.pathname === "/" ? (
+          <a className="text-[7.5px] tracking-wider font-Synocopate hidden lg:block text-white">
+            Explore
+          </a>
+        ) : (
+          <p className="text-[7.5px] tracking-wider font-Synocopate hidden lg:block text-white">
+            Top
+          </p>
+        )}
       </div>
 
-      {pathname === "/" && (
+      {router.pathname === "/" && (
         <motion.div
           initial={{
             x: 500,
@@ -141,7 +152,7 @@ const Footer = () => {
         </motion.div>
       )}
 
-      {pathname !== "/" && (
+      {router.pathname !== "/" && (
         <motion.div
           initial="hidden"
           whileInView="visible"

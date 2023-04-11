@@ -28,7 +28,7 @@ const childVariants = {
 const About = ({ experience, techStack }: Props) => {
   const title = "About - Elijah Ohiwerei";
   const description =
-    "Learn more about Elijah Ohiwerei, a Software Developer professional with over three years of experience. My portfolio website is a showcase of my skills, experience, and passion for fullstack web and mobile development. Browse through my portfolio to see some of my best work and learn more about my approach to software development.";
+    "Elijah Ohiwerei is a Software Developer professional with over three years of experience. Browse through my portfolio to see some of my best work and learn more about my approach to software development.";
   const keywords =
     "about, web development, web design, portfolio, skills, experience, approach, HTML, CSS, JavaScript, responsive design, front-end development, back-end development, mobile develeopment, flutter, ";
 

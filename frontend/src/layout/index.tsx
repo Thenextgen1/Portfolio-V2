@@ -122,7 +122,7 @@ const BaseLayout: FC<Props> = ({ children, title, description, keywords }) => {
         <link
           rel="canonical"
           href="https://elijahohiwerei.netlify.app/"
-        ></link>
+        />
       </Head>
       <Header />
       {children}
