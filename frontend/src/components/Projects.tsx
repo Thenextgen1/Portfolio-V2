@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import React from "react";
 import { AiFillEye } from "react-icons/ai";
 import { Project } from "../../typings";
 import styles from "../styles/Project.module.css";
+import { url } from "inspector";
 
 type Props = {
   project: Project;
@@ -14,35 +16,37 @@ const childVariants = {
 };
 
 const Projects = ({ project }: Props) => {
+  const router = useRouter();
+
   return (
-    <motion.a
+    <motion.div
       initial="hidden"
       whileInView="visible"
       variants={childVariants}
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
       className={styles.card}
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
+      onClick={() => router.push(`${project.url}`)}
     >
       <div>
         <h2 className="text-xl uppercase font-bold">
           {project.titleOfProject}
         </h2>
-        {project.techStack.map((tech, i) => (
-          <p
-            className="uppercase text-[10px] mr-4 inline-block opacity-90"
-            key={i}
-          >
-            {tech}
-          </p>
-        ))}
+        <div className="my-3">
+          {project.techStack.map((tech, i) => (
+            <p
+              className="uppercase text-[10px] mr-2 inline-block opacity-90"
+              key={i}
+            >
+              {tech}
+            </p>
+          ))}
+        </div>
         <p className="text-xs tracking-widest mt-4 opacity-75 leading-loose">
           {project.description}
         </p>
       </div>
-      <div>
+      <div className="my-6">
         <p className="text-xs cursor-pointer hover:text-white">
           <a
             href={project.url}
@@ -57,7 +61,7 @@ const Projects = ({ project }: Props) => {
           </a>
         </p>
       </div>
-    </motion.a>
+    </motion.div>
   );
 };
 

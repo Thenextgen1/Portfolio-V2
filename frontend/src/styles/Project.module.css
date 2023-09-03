@@ -1,7 +1,7 @@
 .card {
-    @apply pl-7 py-8 tracking-wider flex-col flex justify-between mb-5;
+    @apply px-6 py-8 tracking-wider flex-col flex justify-between mb-5;
     background-color: var(--cardColor);
-    height: 250px;
+    min-height: 250px;
 
 }
 
