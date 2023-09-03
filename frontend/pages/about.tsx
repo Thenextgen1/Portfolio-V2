@@ -75,12 +75,12 @@ const About = ({ experience, techStack }: Props) => {
             className="lg:mt-24 lg:flex lg:justify-end lg:mr-7 mt-10"
           >
             <p className="tracking-wider opacity-80 text-sm sm:text-base leading-loose ">
-              Web design, User Interface develeopment{" "}
-              <span className="hidden lg:block my-2">
+              Web design, User Interface development{" "}
+              <span className="block lg:my-2">
                 {" "}
                 and data analysis are all areas of interest for me.{" "}
               </span>
-              <span className="hidden lg:block">
+              <span className="block">
                 {" "}
                 Currently exploring the decentralised web.
               </span>
@@ -118,7 +118,7 @@ const About = ({ experience, techStack }: Props) => {
           <h2 className="font-Synocopate lg:text-[23px] font-semibold opacity-90 mb-8">
             TECH STACK
           </h2>
-          <div className="flex flex-col md:flex-row md:flex-wrap md:justify-between">
+          <div className="flex flex-col md:flex-row md:flex-wrap">
             {techStack?.map((techStack) => (
               <Stack
                 key={techStack._id}

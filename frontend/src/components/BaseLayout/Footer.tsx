@@ -6,11 +6,10 @@ import { AiFillGithub } from "react-icons/ai";
 import { GrLinkedinOption } from "react-icons/gr";
 import { MdMail } from "react-icons/md";
 import styles from "../../styles/Footer.module.css";
-import Link from "next/link";
 
 const childVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: 40 },
 };
 
 const Footer = () => {
