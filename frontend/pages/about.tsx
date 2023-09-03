@@ -59,7 +59,7 @@ const About = ({ experience, techStack }: Props) => {
               exit={{ opacity: 0, x: -100, transition: { duration: 0.5 } }}
               className="lg:text-[53px] sm:text-3xl tracking-wide lg:font-bold font-semibold font-Synocopate leading-normal lg:leading-none text-xl"
             >
-              NIGERIAN - BASED <br /> FRONTEND
+              CHELMSFORD - BASED <br /> SOFTWARE
               <br /> <span className={`${styles.about_stroke}`}>
                 DEVELOPER
               </span>{" "}
@@ -76,10 +76,14 @@ const About = ({ experience, techStack }: Props) => {
           >
             <p className="tracking-wider opacity-80 text-sm sm:text-base leading-loose ">
               Web design, User Interface develeopment{" "}
-              <br className="hidden lg:block" /> and data analysis are all areas
-              of interest for me.
-              <br className="hidden lg:block" /> Currently exploring the
-              decentralised web.
+              <span className="hidden lg:block my-2">
+                {" "}
+                and data analysis are all areas of interest for me.{" "}
+              </span>
+              <span className="hidden lg:block">
+                {" "}
+                Currently exploring the decentralised web.
+              </span>
             </p>
           </motion.div>
         </section>
