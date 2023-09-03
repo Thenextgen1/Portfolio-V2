@@ -35,14 +35,14 @@ const Projects = ({ project }: Props) => {
         <div className="my-3">
           {project.techStack.map((tech, i) => (
             <p
-              className="uppercase text-[10px] mr-2 inline-block opacity-90"
+              className="uppercase text-[10px] mr-2 inline-block opacity-70"
               key={i}
             >
               {tech}
             </p>
           ))}
         </div>
-        <p className="text-xs tracking-widest mt-4 opacity-75 leading-loose">
+        <p className="text-[13px] tracking-widest mt-4 opacity-75 leading-loose">
           {project.description}
         </p>
       </div>
