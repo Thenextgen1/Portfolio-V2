@@ -44,6 +44,10 @@ const Portfolio = ({ project }: Props) => {
           ))}
         </section>
 
+        {/* <section className="mt-16">
+          <h3 className="text-xs font-bold lg:ml-5">ARTICLES</h3>
+        </section> */}
+
         <ul className="mt-20 flex justify-center pb-6 text-xs lg:text-sm tracking-widest">
           <motion.li
             initial="hidden"
@@ -70,9 +74,9 @@ const Portfolio = ({ project }: Props) => {
           </motion.li>
         </ul>
 
-        <h5 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-16 opacity-80">
+        <h4 className="hidden lg:block uppercase text-center text-sm tracking-widest py-10 lg:mt-8 lg:py-16 opacity-80">
           &#169; 2022 - Elijah Ohiwerei
-        </h5>
+        </h4>
       </main>
     </BaseLayout>
   );
